@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A quick interview-style guide to AI, LLMs, RAG, and agentic AI.">
+  <title>AI in Plain English — Quick Interview Guide</title>
+  <style>
+    :root { --ink: #18212f; --muted: #5d6b7b; --paper: #f6f8fb; --card: #ffffff; --line: #dce4ee; --blue: #1769aa; --blue-soft: #e9f3fb; --gold: #b86b00; --shadow: 0 10px 30px rgba(27, 52, 80, .08); }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { max-width: 940px; margin: 0 auto; padding: 48px 20px 72px; }
+    header { padding: 42px; border-radius: 24px; color: #fff; background: linear-gradient(135deg, #133b5c, #1769aa); box-shadow: var(--shadow); }
+    header p { max-width: 700px; margin: 12px 0 0; color: #e8f3fb; font-size: 1.08rem; }
+    h1 { margin: 0; max-width: 760px; font-size: clamp(2.1rem, 5vw, 4rem); line-height: 1.05; letter-spacing: -.04em; }
+    h2 { margin: 42px 0 16px; font-size: 1.65rem; letter-spacing: -.02em; }
+    h3 { margin: 0 0 8px; font-size: 1.08rem; line-height: 1.35; }
+    .eyebrow { margin: 0 0 14px; color: #bce5ff; font-size: .78rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .story { margin: 26px 0; padding: 24px 28px; border: 1px solid #b9d9ee; border-radius: 16px; background: var(--blue-soft); }
+    .story strong { color: var(--blue); }
+    .flow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; color: var(--blue); font-weight: 750; }
+    .flow span { padding: 6px 10px; border-radius: 999px; background: #fff; border: 1px solid #c8e0ef; }
+    .qa { position: relative; margin: 14px 0; padding: 22px 24px 22px 68px; border: 1px solid var(--line); border-radius: 16px; background: var(--card); box-shadow: 0 4px 14px rgba(27, 52, 80, .04); }
+    .number { position: absolute; top: 21px; left: 22px; display: grid; width: 30px; height: 30px; place-items: center; border-radius: 50%; color: #fff; background: var(--blue); font-size: .85rem; font-weight: 800; }
+    .qa p { margin: 8px 0 0; }
+    .qa ul, .qa ol { margin: 8px 0 0; padding-left: 22px; }
+    .qa code, .story code { padding: 2px 6px; border-radius: 5px; color: #7a4700; background: #fff4df; font-size: .92em; }
+    .answer-label { color: var(--gold); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .sources { color: var(--muted); font-size: .94rem; }
+    a { color: var(--blue); } header a { color: #fff; }
+    footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    @media (max-width: 600px) { main { padding: 18px 14px 48px; } header { padding: 28px 22px; border-radius: 18px; } .qa { padding: 20px 18px 20px 56px; } .number { left: 16px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">Quick interview guide</p>
+    <h1>AI in Plain English</h1>
+    <p>How we moved from early AI and neural networks to Transformers, LLMs, RAG, and agentic AI—and why each step became necessary.</p>
+  </header>
+  <section class="story" aria-label="The one-minute story">
+    <strong>The one-minute story</strong>
+    <p>AI is not new. The recent wave happened because neural networks learned from more data, GPUs made the math fast enough, Transformers handled context efficiently, and chat interfaces made the results easy to use.</p>
+    <div class="flow" aria-label="AI technology progression"><span>rules</span><span>neural networks</span><span>Transformers</span><span>LLMs</span><span>GenAI / chat</span><span>RAG</span><span>agentic AI</span></div>
+  </section>
+  <h2>Interview questions, in chronological order</h2>
+  <article class="qa"><span class="number">1</span><h3>Is AI new?</h3><span class="answer-label">Answer</span><p><strong>No.</strong> AI has existed since the 1950s. Earlier systems used rules, search, statistics, and expert knowledge. They were useful but often brittle when language or situations became messy.</p></article>
+  <article class="qa"><span class="number">2</span><h3>What problem were researchers trying to solve with language?</h3><span class="answer-label">Answer</span><p>People wanted computers to understand and produce natural language instead of requiring exact commands. Language is difficult because meaning depends on surrounding words, word order, tone, and real-world context.</p></article>
+  <article class="qa"><span class="number">3</span><h3>What is a neural network?</h3><span class="answer-label">Answer</span><p>A neural network is a set of connected mathematical layers. During training, it adjusts learned numbers called <strong>weights</strong> so it gets better at recognizing patterns. Deep learning uses many such layers.</p></article>
+  <article class="qa"><span class="number">4</span><h3>What is a GPU, and why is it important?</h3><span class="answer-label">Answer</span><p>A GPU, or graphics processing unit, does many similar calculations in parallel. Neural networks use huge matrix calculations, so GPUs and other AI accelerators make training and inference much faster.</p></article>
+  <article class="qa"><span class="number">5</span><h3>What changed with “Attention Is All You Need”?</h3><span class="answer-label">Answer</span><p>In 2017, the paper introduced the <strong>Transformer</strong> architecture. Its key idea, <strong>attention</strong>, lets a model weigh which parts of the input matter most to one another. A useful memory aid is “context is what you need,” but that is not the paper’s title.</p></article>
+  <article class="qa"><span class="number">6</span><h3>What is a Transformer?</h3><span class="answer-label">Answer</span><p>A Transformer is a neural-network architecture built around attention. It learns relationships between tokens and can be trained efficiently in parallel. It is a foundation for many language models, not a chatbot or agent by itself.</p></article>
+  <article class="qa"><span class="number">7</span><h3>What is pretraining?</h3><span class="answer-label">Answer</span><p>Pretraining is the first large learning stage. A model sees lots of text and practices predicting the next token. It learns language patterns and relationships that are stored in its weights.</p></article>
+  <article class="qa"><span class="number">8</span><h3>What is an LLM, and what does GPT mean?</h3><span class="answer-label">Answer</span><p>An <strong>LLM</strong> is a large language model. The first GPT paper appeared in 2018; later scaling, including GPT-3 in 2020, improved the model’s ability to perform many language tasks. <strong>GPT</strong> means <strong>Generative Pre-trained Transformer</strong>: it generates output, is pretrained on large datasets, and uses the Transformer architecture. GPT is one family of LLMs; not every LLM is GPT.</p></article>
+  <article class="qa"><span class="number">9</span><h3>What is a token?</h3><span class="answer-label">Answer</span><p>A token is a small piece of text: a word, part of a word, punctuation, or another tokenizer-defined piece. The model converts tokens into numbers and predicts the next token. Tokens are not exactly words, and token counts affect context limits, speed, and cost.</p></article>
+  <article class="qa"><span class="number">10</span><h3>What is inference?</h3><span class="answer-label">Answer</span><p><strong>Inference</strong> is using a trained model to produce an output from an input. Training changes weights; inference uses them. A model answering a prompt is doing inference.</p></article>
+  <article class="qa"><span class="number">11</span><h3>What is GenAI?</h3><span class="answer-label">Answer</span><p><strong>Generative AI</strong> creates new output from a prompt or other input. LLMs generate text and code, while other GenAI systems generate images, audio, video, or structured data.</p></article>
+  <article class="qa"><span class="number">12</span><h3>Why did ChatGPT matter?</h3><span class="answer-label">Answer</span><p>In 2022, ChatGPT made large language models easy for everyday people to use through conversation. It was not the first natural-language AI tool or the first GPT interface; it made instruction-following, multi-turn conversation, and useful generation feel accessible in one product.</p></article>
+  <article class="qa"><span class="number">13</span><h3>Why was RAG needed?</h3><span class="answer-label">Answer</span><p>LLMs have a training cutoff and do not automatically know an organization’s private or current information. The term <strong>retrieval-augmented generation (RAG)</strong> was formalized in a 2020 paper. RAG searches relevant sources at question time, puts selected passages into the prompt, and asks the LLM to answer using that context.</p><p><code>question → retrieve → prompt → grounded answer</code></p></article>
+  <article class="qa"><span class="number">14</span><h3>What are embeddings and a vector database?</h3><span class="answer-label">Answer</span><p>An <strong>embedding</strong> represents text as numbers so similar meanings are mathematically close. A <strong>vector database</strong> stores those embeddings and finds nearby passages. In RAG, the vector database is the search memory; the LLM is the language generator.</p></article>
+  <article class="qa"><span class="number">15</span><h3>What is agentic AI?</h3><span class="answer-label">Answer</span><p>An <strong>agentic AI</strong> system can take a goal, break it into steps, use tools, inspect results, and continue until it reaches a stopping point. Reliable agents still need permissions, guardrails, logging, evaluation, and human approval for risky actions.</p></article>
+  <article class="qa"><span class="number">16</span><h3>What important ideas are easy to miss?</h3><span class="answer-label">Answer</span><ul><li><strong>Instruction tuning and alignment</strong> help a base model follow instructions and safety rules.</li><li><strong>Grounding and evaluation</strong> matter because a fluent answer is not automatically correct.</li><li><strong>Multimodal AI</strong> combines text with images, audio, video, code, and tools.</li></ul></article>
+  <section class="story"><strong>The simplest mental model</strong><p>An LLM is a powerful pattern generator. RAG supplies better and more current context. An agent adds a loop so the model can use tools and complete multi-step work. All three still need good data, security, testing, and human judgment.</p></section>
+  <footer class="sources"><p><strong>Selected sources:</strong> <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a> · <a href="https://arxiv.org/abs/2005.11401">RAG paper</a> · <a href="https://arxiv.org/abs/2005.14165">GPT-3 paper</a> · <a href="https://openai.com/index/chatgpt/">Introducing ChatGPT</a></p><p>Prefer Markdown? Read the companion <a href="AI-QUICK-GUIDE.md">AI-QUICK-GUIDE.md</a>.</p></footer>
+</main>
+</body>
+</html>
