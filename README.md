@@ -130,8 +130,10 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A[Prompt] --> B[Generative model]
-    B --> C[Text / code / image / audio]
+    A[Trained weights] + B[Prompt] --> C[Inference]
+    A[Trained weights] --> C[Inference]
+    B[Prompt] --> C
+    C --> D[Answer]
 ```
 
 ### 12. Why did ChatGPT matter?
